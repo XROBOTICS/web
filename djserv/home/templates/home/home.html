@@ -1,6 +1,15 @@
+
+{% block content %}
 <div class="container">
 <h1>Home</h1>
-<form metgod="post">
-	<input type="text">
+<form method = "post">
+	{%csrf_token%}
+	{{ form.as_p }}
+
 	<button type="sumbit">Sumbit</button>
+</form>	
+<h2>{{ text }}</h2>
+
+	
 </div>
+{% endblock %}

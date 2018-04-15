@@ -1,15 +1,19 @@
 from django import forms
-from home.models import Post
+
+
+class HomeForm(forms.Form):
+	post = forms.CharField()
+		
+
+	'''def get_post():
+		return self.post
+		attrs={
+		'class': 'form-control',
+		'placeholder': 'Write a post...'
+		}
+	
+
+	class Meta:
+		model = Post
+		fields = ('post')
 '''
-
-class HomeForm(forms.ModelForm):
-    post = forms.CharField(widget=forms.TextInput(
-        attrs={
-            'class': 'form-control',
-            'placeholder': 'Write a post...'
-        }
-    ))
-
-    class Meta:
-        model = Post
-        fields = ('post',)'''
